@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Directorio:</strong>
+  <%= @red_directorio.directorio_id %>
+</p>
+
+<p>
+  <strong>Red:</strong>
+  <%= @red_directorio.red %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @red_directorio.link %>
+</p>
+
+<%= link_to 'Edit', edit_red_directorio_path(@red_directorio) %> |
+<%= link_to 'Back', red_directorios_path %>

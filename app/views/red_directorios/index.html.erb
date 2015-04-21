@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Red Directorios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Directorio</th>
+      <th>Red</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @red_directorios.each do |red_directorio| %>
+      <tr>
+        <td><%= red_directorio.directorio_id %></td>
+        <td><%= red_directorio.red %></td>
+        <td><%= red_directorio.link %></td>
+        <td><%= link_to 'Show', red_directorio %></td>
+        <td><%= link_to 'Edit', edit_red_directorio_path(red_directorio) %></td>
+        <td><%= link_to 'Destroy', red_directorio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Red directorio', new_red_directorio_path %>
